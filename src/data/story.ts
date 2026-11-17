@@ -17,11 +17,9 @@ export const story = {
     eyebrow: "A LOVE LETTER TO THE WOMAN I LOVE",
     title: "Her Journey,",
     accent: "Our Greatest Miracle",
-    subtitle:
-      "A beautiful story of faith, courage, sacrifice, motherhood and a love that brought a new little universe into our lives.",
+    subtitle: "A beautiful story of faith, courage, sacrifice, motherhood and a love that brought a new little universe into our lives.",
     image: "/images/hero-watercolor.webp",
-    handwrittenMessage:
-      "To the woman who made me a husband, and then made us parents.",
+    handwrittenMessage: "To the woman who made me a husband, and then made us parents.",
     buttonText: "Begin Our Story",
     footerText: "A STORY WRITTEN IN LOVE, FAITH AND MIRACLES"
   },
@@ -29,8 +27,7 @@ export const story = {
   introduction: {
     eyebrow: "TO MY DEAREST LOVE",
     title: "Before she arrived, there was you.",
-    description:
-      "This is not simply the story of the day our daughter was born. It is the story of the woman who carried her, prayed for her, protected her and gave everything to bring her safely into this world.",
+    description: "This is not simply the story of the day our daughter was born. It is the story of the woman who carried her, prayed for her, protected her and gave everything to bring her safely into this world.",
     illustration: "/images/intro-couple.webp"
   },
 
@@ -40,8 +37,7 @@ export const story = {
       number: "01",
       label: "THE BEGINNING",
       title: "After Hajj, A New Little Universe Began Within You.",
-      subtitle:
-        "Some miracles begin quietly. Ours began after the sacred days of Hajj.",
+      subtitle: "Some miracles begin quietly. Ours began after the sacred days of Hajj.",
       theme: "peach",
       illustration: "/images/chapter-01-hajj.webp",
       paragraphs: [
@@ -51,31 +47,14 @@ export const story = {
         "Then came the morning sickness. Happiness was now accompanied by nausea, physical discomfort and uncertainty.",
         "Without even realizing it, you had already begun becoming someone's entire world."
       ],
-      quote:
-        "A little life began within you, and an entirely new world began for us.",
-      memories: [
-        {
-          image: "/images/memories/hajj.webp",
-          caption: "The sacred days before our new beginning"
-        },
-        {
-          image: "/images/memories/discovery.webp",
-          caption: "The beautiful July discovery"
-        },
-        {
-          image: "/images/memories/early-pregnancy.webp",
-          caption: "The first days of our little miracle"
-        }
-      ]
+      quote: "A little life began within you, and an entirely new world began for us."
     },
-
     {
       id: "faith-and-strength",
       number: "02",
       label: "FAITH AND STRENGTH",
       title: "She Carried a Little Life, Even When Life Became Heavy.",
-      subtitle:
-        "Her body was tested, her patience was tested, but her heart never stopped finding strength.",
+      subtitle: "Her body was tested, her patience was tested, but her heart never stopped finding strength.",
       theme: "lavender",
       illustration: "/images/chapter-02-strength.webp",
       paragraphs: [
@@ -87,19 +66,15 @@ export const story = {
         "Even with physical weakness and discomfort, you continued attending Taraweeh prayers. Not a night missed. Not a prayer left behind.",
         "I watched you find strength in your faith even when your body was asking for rest."
       ],
-      quote:
-        "Her body carried the weight of pregnancy, but her heart carried the strength of faith. Even on her weakest nights, she found the strength to pray.",
-      handwrittenTribute:
-        "I saw how much you endured. But I also saw how beautifully you held on to your faith."
+      quote: "Her body carried the weight of pregnancy, but her heart carried the strength of faith. Even on her weakest nights, she found the strength to pray.",
+      handwrittenTribute: "I saw how much you endured. But I also saw how beautifully you held on to your faith."
     },
-
     {
       id: "anticipation",
       number: "03",
       label: "DREAMS AND ANTICIPATION",
       title: "Every Little Movement Brought Us Closer to You.",
-      subtitle:
-        "Before we knew her face, we already knew how deeply we loved her.",
+      subtitle: "Before we knew her face, we already knew how deeply we loved her.",
       theme: "blue",
       illustration: "/images/chapter-03-dreams.webp",
       paragraphs: [
@@ -109,35 +84,14 @@ export const story = {
         "We discussed names. We suggested possibilities, changed our minds and discussed them all over again.",
         "Our family started waiting for her too."
       ],
-      quote:
-        "Every ultrasound showed us a little more of her, but our hearts had already made room for her completely.",
-      gallery: [
-        {
-          image: "/images/memories/ultrasound-01.webp",
-          caption: "Our first little glimpse"
-        },
-        {
-          image: "/images/memories/ultrasound-02.webp",
-          caption: "Watching you grow"
-        },
-        {
-          image: "/images/memories/ultrasound-03.webp",
-          caption: "Another beautiful appointment"
-        },
-        {
-          image: "/images/memories/tiny-clothes.webp",
-          caption: "Little clothes for our little girl"
-        }
-      ]
+      quote: "Every ultrasound showed us a little more of her, but our hearts had already made room for her completely."
     },
-
     {
       id: "birth",
       number: "04",
       label: "THIRTY MINUTES BETWEEN PAIN AND MIRACLE",
       title: "After Everything You Endured, You Still Chose Love.",
-      subtitle:
-        "Ten hours of courage. An unexpected decision. Thirty minutes that changed our lives forever.",
+      subtitle: "Ten hours of courage. An unexpected decision. Thirty minutes that changed our lives forever.",
       theme: "gold",
       illustration: "/images/chapter-04-birth.webp",
       paragraphs: [
@@ -151,26 +105,22 @@ export const story = {
         "I stood beside you, held your hand and whispered whatever strength I could find.",
         "And then, in just thirty minutes, our daughter arrived during the blessed month of Ramadan."
       ],
-      quote:
-        "The delivery did not happen the way you imagined. But you became a mother in the most extraordinary way.",
+      quote: "The delivery did not happen the way you imagined. But you became a mother in the most extraordinary way.",
       birthAnnouncement: "Delivered… safe… operation successful.",
       newborn: {
         image: "/images/newborn-01.webp",
-        caption:
-          "Our daughter. Our Ramadan miracle. Our forever blessing.",
+        caption: "Our daughter. Our Ramadan miracle. Our forever blessing.",
         birthDate: "BIRTH DATE",
         birthTime: "BIRTH TIME",
         birthWeight: "BIRTH WEIGHT"
       }
     },
-
     {
       id: "motherhood",
       number: "05",
       label: "MOTHERHOOD AND FOREVER",
       title: "You Became a Mother. And We Began Learning to Be Parents.",
-      subtitle:
-        "The miracle of birth was not the end of our story. It was the beginning of everything.",
+      subtitle: "The miracle of birth was not the end of our story. It was the beginning of everything.",
       theme: "pink",
       illustration: "/images/chapter-05-motherhood.webp",
       paragraphs: [
@@ -183,12 +133,58 @@ export const story = {
         "Your mother was there. Your sister was there. I stood beside you. Our hospital room filled with family, conversations, laughter and love.",
         "We were learning. We were adjusting. And slowly, we were becoming a family of three."
       ],
-      quote:
-        "What seemed like an ordinary step to someone else was a mountain you conquered.",
-      handwrittenTribute:
-        "I saw the courage it took to bring her into this world. And I saw the courage it took to take your first steps afterward."
+      quote: "What seemed like an ordinary step to someone else was a mountain you conquered.",
+      handwrittenTribute: "I saw the courage it took to bring her into this world. And I saw the courage it took to take your first steps afterward."
     }
   ],
+
+  chapter01Gallery: [
+    { id: "hajj", image: "/images/memories/hajj.webp", caption: "The sacred days before our new beginning", category: "Beginning" },
+    { id: "discovery", image: "/images/memories/discovery.webp", caption: "The beautiful July discovery", category: "Pregnancy" },
+    { id: "early-pregnancy", image: "/images/memories/early-pregnancy.webp", caption: "The first days of our little miracle", category: "Pregnancy" }
+  ],
+
+  chapter02Gallery: [],
+
+  chapter03Gallery: [
+    { id: "ultrasound-01", image: "/images/memories/ultrasound-01.webp", caption: "Our first little glimpse", category: "Ultrasound" },
+    { id: "ultrasound-02", image: "/images/memories/ultrasound-02.webp", caption: "Watching you grow", category: "Ultrasound" },
+    { id: "ultrasound-03", image: "/images/memories/ultrasound-03.webp", caption: "Another beautiful appointment", category: "Ultrasound" },
+    { id: "tiny-clothes", image: "/images/memories/tiny-clothes.webp", caption: "Little clothes for our little girl", category: "Preparations" }
+  ],
+
+  chapter04Gallery: [
+    { id: "newborn", image: "/images/newborn-01.webp", caption: "Our daughter, our Ramadan miracle", category: "Birth" },
+    { id: "family", image: "/images/memories/family.webp", caption: "The beginning of our family of three", category: "Family" }
+  ],
+
+  chapter05Gallery: [
+    { id: "newborn", image: "/images/newborn-01.webp", caption: "Our beautiful little miracle", category: "Newborn" },
+    { id: "family", image: "/images/memories/family.webp", caption: "Our beautiful beginning", category: "Family" }
+  ],
+
+  memoryGalleries: {
+    chapter01: [
+      { id: "hajj", image: "/images/memories/hajj.webp", caption: "The sacred days before our new beginning", category: "Beginning" },
+      { id: "discovery", image: "/images/memories/discovery.webp", caption: "The beautiful July discovery", category: "Pregnancy" },
+      { id: "early-pregnancy", image: "/images/memories/early-pregnancy.webp", caption: "The first days of our little miracle", category: "Pregnancy" }
+    ],
+    chapter02: [],
+    chapter03: [
+      { id: "ultrasound-01", image: "/images/memories/ultrasound-01.webp", caption: "Our first little glimpse", category: "Ultrasound" },
+      { id: "ultrasound-02", image: "/images/memories/ultrasound-02.webp", caption: "Watching you grow", category: "Ultrasound" },
+      { id: "ultrasound-03", image: "/images/memories/ultrasound-03.webp", caption: "Another beautiful appointment", category: "Ultrasound" },
+      { id: "tiny-clothes", image: "/images/memories/tiny-clothes.webp", caption: "Little clothes for our little girl", category: "Preparations" }
+    ],
+    chapter04: [
+      { id: "newborn", image: "/images/newborn-01.webp", caption: "Our daughter, our Ramadan miracle", category: "Birth" },
+      { id: "family", image: "/images/memories/family.webp", caption: "The beginning of our family of three", category: "Family" }
+    ],
+    chapter05: [
+      { id: "newborn", image: "/images/newborn-01.webp", caption: "Our beautiful little miracle", category: "Newborn" },
+      { id: "family", image: "/images/memories/family.webp", caption: "Our beautiful beginning", category: "Family" }
+    ]
+  },
 
   timeline: [
     { id: "hajj", title: "Sacred Days of Hajj", description: "The beautiful days before our new beginning.", date: "ADD DATE" },
@@ -207,42 +203,20 @@ export const story = {
   ],
 
   gallery: [
-    {
-      id: "ultrasound",
-      image: "/images/memories/ultrasound-01.webp",
-      caption: "Our first little glimpse",
-      category: "Pregnancy"
-    },
-    {
-      id: "clothes",
-      image: "/images/memories/tiny-clothes.webp",
-      caption: "Little clothes for our little girl",
-      category: "Preparations"
-    },
-    {
-      id: "birth",
-      image: "/images/newborn-01.webp",
-      caption: "Our beautiful little miracle",
-      category: "Newborn"
-    },
-    {
-      id: "family",
-      image: "/images/memories/family.webp",
-      caption: "Our beautiful beginning",
-      category: "Family"
-    }
+    { id: "ultrasound", image: "/images/memories/ultrasound-01.webp", caption: "Our first little glimpse", category: "Pregnancy" },
+    { id: "clothes", image: "/images/memories/tiny-clothes.webp", caption: "Little clothes for our little girl", category: "Preparations" },
+    { id: "birth", image: "/images/newborn-01.webp", caption: "Our beautiful little miracle", category: "Newborn" },
+    { id: "family", image: "/images/memories/family.webp", caption: "Our beautiful beginning", category: "Family" }
   ],
 
   birthAnnouncement: {
     eyebrow: "THE MOMENT OUR WORLD CHANGED",
     title: "And then, there were three.",
-    message:
-      "After every prayer, every contraction, every difficult moment and every sacrifice, the moment we had dreamed about finally came.",
+    message: "After every prayer, every contraction, every difficult moment and every sacrifice, the moment we had dreamed about finally came.",
     revealText: "Tap to reveal our miracle",
     announcement: "Delivered… safe… operation successful.",
     image: "/images/newborn-01.webp",
-    closing:
-      "Welcome to our world, little one. You were loved long before we met you."
+    closing: "Welcome to our world, little one. You were loved long before we met you."
   },
 
   finalLetter: {
@@ -268,8 +242,7 @@ export const story = {
 
   closing: {
     title: "One Journey. Three Hearts. Forever.",
-    message:
-      "May Allah bless our little family with a lifetime of love, happiness, health and barakah.",
+    message: "May Allah bless our little family with a lifetime of love, happiness, health and barakah.",
     footer: "MADE WITH ENDLESS LOVE · OUR FAMILY STORY",
     family: "YOU · ME · HER"
   }
