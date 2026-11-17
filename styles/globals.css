@@ -1,0 +1,505 @@
+
+/* =========================================
+   HER JOURNEY, OUR GREATEST MIRACLE
+   GLOBAL DESIGN SYSTEM
+========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=Caveat:wght@400;500;600;700&display=swap');
+
+/* =========================================
+   1. DESIGN TOKENS
+========================================= */
+
+:root {
+  color-scheme: light;
+
+  --ivory: #FFF9F1;
+  --warm-white: #FFFCF8;
+  --cream: #F9F0E5;
+
+  --peach: #F6C8B5;
+  --soft-peach: #FCE4D8;
+  --coral: #E98C83;
+  --deep-coral: #CE726F;
+
+  --pink: #F2BDD0;
+  --soft-pink: #FBE8EF;
+  --rich-pink: #D98DA9;
+
+  --lavender: #D9C9EC;
+  --soft-lavender: #F0EAF8;
+  --deep-lavender: #9D87B8;
+
+  --baby-blue: #C8DFEF;
+  --soft-blue: #E8F2F8;
+
+  --mint: #C9E3D2;
+  --soft-mint: #EAF4ED;
+
+  --butter: #F5E4A9;
+  --soft-yellow: #FBF3D8;
+
+  --champagne: #D6B779;
+  --gold: #B99352;
+  --soft-gold: #F0DFB9;
+
+  --midnight: #252C49;
+  --deep-blue: #303A60;
+
+  --text-primary: #51434A;
+  --text-secondary: #82747A;
+  --text-light: #A99BA0;
+
+  --white: #FFFFFF;
+
+  --font-heading: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-handwriting: 'Caveat', cursive;
+
+  --content-width: 1120px;
+  --reading-width: 760px;
+
+  --section-spacing: clamp(80px, 12vw, 150px);
+
+  --radius-small: 12px;
+  --radius-medium: 24px;
+  --radius-large: 36px;
+  --radius-round: 999px;
+
+  --shadow-soft:
+    0 12px 40px rgba(113, 83, 91, 0.07);
+
+  --shadow-card:
+    0 20px 55px rgba(113, 83, 91, 0.10);
+
+  --transition-fast: 180ms ease;
+  --transition-normal: 350ms ease;
+  --transition-slow: 700ms ease;
+}
+
+/* =========================================
+   2. RESET
+========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+  background: var(--ivory);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+
+  background: var(--ivory);
+  color: var(--text-primary);
+
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.8;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  overflow-x: hidden;
+}
+
+body,
+button,
+input,
+textarea {
+  font-family: var(--font-body);
+}
+
+button {
+  color: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--champagne);
+  outline-offset: 5px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul,
+ol {
+  padding-left: 1.5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-top: 0;
+}
+
+::selection {
+  color: var(--midnight);
+  background: var(--soft-pink);
+}
+
+/* =========================================
+   3. TYPOGRAPHY
+========================================= */
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+}
+
+h1 {
+  font-size: clamp(3rem, 8vw, 6.5rem);
+}
+
+h2 {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+}
+
+h3 {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+}
+
+p {
+  color: var(--text-secondary);
+}
+
+.handwritten,
+.signature,
+.handwritten-text {
+  font-family: var(--font-handwriting);
+}
+
+.handwritten {
+  font-size: clamp(1.7rem, 4vw, 2.8rem);
+  line-height: 1.3;
+}
+
+.signature {
+  font-size: 2rem;
+  color: var(--deep-coral);
+}
+
+/* =========================================
+   4. GLOBAL CONTAINERS
+========================================= */
+
+#root {
+  min-height: 100vh;
+}
+
+.story-app {
+  width: 100%;
+  min-height: 100vh;
+  overflow: clip;
+  isolation: isolate;
+}
+
+.container {
+  width: min(
+    calc(100% - 48px),
+    var(--content-width)
+  );
+
+  margin-inline: auto;
+}
+
+.reading-container {
+  width: min(
+    calc(100% - 48px),
+    var(--reading-width)
+  );
+
+  margin-inline: auto;
+}
+
+/* =========================================
+   5. CHAPTER BASE
+========================================= */
+
+.chapter {
+  position: relative;
+  width: 100%;
+  isolation: isolate;
+  overflow: clip;
+}
+
+.chapter-label {
+  display: inline-block;
+
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 700;
+
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+
+  color: var(--deep-coral);
+}
+
+.chapter-story-text {
+  width: min(
+    calc(100% - 48px),
+    var(--reading-width)
+  );
+
+  margin-inline: auto;
+}
+
+.chapter-story-text p {
+  font-size: clamp(0.98rem, 1.5vw, 1.1rem);
+  line-height: 2.1;
+  margin-bottom: 1.5rem;
+}
+
+/* =========================================
+   6. SECTION HEADINGS
+========================================= */
+
+.section-heading {
+  width: min(
+    calc(100% - 48px),
+    850px
+  );
+
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+.section-heading h2 {
+  color: var(--text-primary);
+  margin: 18px 0;
+}
+
+.section-heading p {
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+/* =========================================
+   7. DECORATIVE ELEMENTS
+========================================= */
+
+.decorative-star {
+  color: var(--champagne);
+  pointer-events: none;
+}
+
+.chapter-transition {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+
+  padding: 35px 0;
+
+  color: var(--champagne);
+  background: var(--ivory);
+
+  font-size: 1.25rem;
+}
+
+.chapter-transition span:nth-child(2) {
+  color: var(--rich-pink);
+  font-size: 1.8rem;
+}
+
+/* =========================================
+   8. BUTTONS
+========================================= */
+
+button {
+  cursor: pointer;
+}
+
+.primary-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  min-height: 50px;
+  padding: 12px 28px;
+
+  border: 0;
+  border-radius: var(--radius-round);
+
+  background: var(--deep-coral);
+  color: var(--white);
+
+  font-weight: 600;
+
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast),
+    background var(--transition-fast);
+}
+
+.primary-button:hover {
+  transform: translateY(-3px);
+  background: var(--coral);
+  box-shadow: var(--shadow-soft);
+}
+
+/* =========================================
+   9. ACCESSIBILITY
+========================================= */
+
+.skip-link {
+  position: fixed;
+  z-index: 9999;
+
+  top: 12px;
+  left: 12px;
+
+  padding: 12px 18px;
+
+  background: var(--midnight);
+  color: var(--white);
+
+  border-radius: var(--radius-small);
+
+  transform: translateY(-150%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.error-page {
+  min-height: 100vh;
+
+  display: grid;
+  place-items: center;
+
+  padding: 24px;
+  text-align: center;
+}
+
+.error-page-content {
+  max-width: 520px;
+}
+
+.error-heart {
+  display: block;
+  color: var(--coral);
+  font-size: 4rem;
+}
+
+.error-page button {
+  padding: 13px 25px;
+  border: 0;
+  border-radius: var(--radius-round);
+  background: var(--deep-coral);
+  color: white;
+}
+
+/* =========================================
+   10. SCROLLBAR
+========================================= */
+
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--ivory);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--pink);
+  border-radius: var(--radius-round);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--rich-pink);
+}
+
+/* =========================================
+   11. RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+  :root {
+    --section-spacing: 80px;
+  }
+
+  body {
+    font-size: 15px;
+  }
+
+  .container,
+  .reading-container,
+  .chapter-story-text {
+    width: calc(100% - 36px);
+  }
+
+  .section-heading {
+    width: calc(100% - 36px);
+    margin-bottom: 38px;
+  }
+
+  .chapter-transition {
+    padding: 25px 0;
+  }
+
+}
+
+@media (max-width: 420px) {
+
+  .container,
+  .reading-container,
+  .chapter-story-text {
+    width: calc(100% - 28px);
+  }
+
+  .chapter-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.16em;
+  }
+
+}
+
+/* =========================================
+   12. REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+}

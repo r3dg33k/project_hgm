@@ -1,0 +1,191 @@
+/* HER JOURNEY — GLOBAL ANIMATIONS */
+
+/* Gentle floating */
+
+@keyframes float-gentle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+/* Ramadan lantern glow */
+
+@keyframes lantern-glow {
+  0%, 100% {
+    opacity: 0.75;
+    filter: drop-shadow(0 0 5px rgba(238, 207, 145, 0.3));
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    filter: drop-shadow(0 0 18px rgba(238, 207, 145, 0.8));
+    transform: translateY(-8px);
+  }
+}
+
+/* Fade in */
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Fade up */
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade down */
+
+@keyframes fade-down {
+  from {
+    opacity: 0;
+    transform: translateY(-25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Soft scale */
+
+@keyframes soft-scale {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Floating hearts */
+
+@keyframes float-heart {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) rotate(-10deg);
+  }
+  20% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100px) rotate(15deg);
+  }
+}
+
+/* Floating flowers */
+
+@keyframes float-flower {
+  0%, 100% {
+    transform: translateY(0) rotate(-5deg);
+  }
+  50% {
+    transform: translateY(-18px) rotate(8deg);
+  }
+}
+
+/* Gentle breathing */
+
+@keyframes gentle-breathe {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.035);
+  }
+}
+
+/* Shimmer */
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+/* Reveal utilities */
+
+.animate-fade-in {
+  animation: fade-in 1s ease both;
+}
+
+.animate-fade-up {
+  animation: fade-up 1s ease both;
+}
+
+.animate-fade-down {
+  animation: fade-down 1s ease both;
+}
+
+.animate-soft-scale {
+  animation: soft-scale 1.1s ease both;
+}
+
+.animate-float {
+  animation: float-gentle 5s ease-in-out infinite;
+}
+
+.animate-flower {
+  animation: float-flower 6s ease-in-out infinite;
+}
+
+.animate-breathe {
+  animation: gentle-breathe 5s ease-in-out infinite;
+}
+
+/* Staggered animation delays */
+
+.delay-100 {
+  animation-delay: 100ms;
+}
+
+.delay-200 {
+  animation-delay: 200ms;
+}
+
+.delay-300 {
+  animation-delay: 300ms;
+}
+
+.delay-500 {
+  animation-delay: 500ms;
+}
+
+.delay-700 {
+  animation-delay: 700ms;
+}
+
+/* Reduced motion accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
