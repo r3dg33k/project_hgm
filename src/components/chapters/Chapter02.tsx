@@ -289,7 +289,7 @@ export default function Chapter02() {
       <div className="chapter-memory-section">
 
         <MemoryGallery
-          images={story.chapter02Gallery}
+          images={story.memoryGalleries.chapter02}
           eyebrow="MEMORIES OF STRENGTH"
           title="The Days That Made You Stronger."
           subtitle="The journeys, the difficult days and the moments of faith we will never forget."

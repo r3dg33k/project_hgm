@@ -165,7 +165,7 @@ export default function Chapter01() {
       <div className="chapter-memory-section">
 
         <MemoryGallery
-          images={story.chapter01Gallery}
+          images={story.memoryGalleries.chapter01}
           eyebrow="OUR FIRST MEMORIES"
           title="The Beginning of Everything."
           subtitle="A few moments from the days when our little universe began."

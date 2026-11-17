@@ -73,7 +73,7 @@ export default function Chapter05() {
       id="motherhood"
       className="chapter chapter-five"
     >
-      <FloatingDecorations variant="motherhood" />
+      <FloatingDecorations variant="romantic" />
 
       {/* Opening */}
       <div className="chapter-five-hero">
@@ -422,7 +422,7 @@ export default function Chapter05() {
       <div className="chapter-memory-section">
 
         <MemoryGallery
-          images={story.chapter05Gallery}
+          images={story.memoryGalleries.chapter05}
           eyebrow="THE FIRST DAYS OF FOREVER"
           title="Little Moments, A Lifetime of Love."
           subtitle="Her first cuddles, our first lessons, your recovery and our first memories as a family."

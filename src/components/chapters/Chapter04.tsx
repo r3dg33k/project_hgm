@@ -23,7 +23,7 @@ export default function Chapter04() {
       id="birth"
       className="chapter chapter-four"
     >
-      <FloatingDecorations variant="golden" />
+      <FloatingDecorations variant="spiritual" />
 
       {/* Cinematic opening */}
       <div className="chapter-four-hero">
@@ -495,7 +495,7 @@ export default function Chapter04() {
       <div className="chapter-memory-section">
 
         <MemoryGallery
-          images={story.chapter04Gallery}
+          images={story.memoryGalleries.chapter04}
           eyebrow="THE DAY OUR WORLD CHANGED"
           title="The Moments We Will Never Forget."
           subtitle="A few photographs from the most extraordinary day of our lives."

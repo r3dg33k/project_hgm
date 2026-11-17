@@ -321,7 +321,7 @@ export default function Chapter03() {
       <div className="chapter-memory-section">
 
         <MemoryGallery
-          images={story.chapter03Gallery}
+          images={story.memoryGalleries.chapter03}
           eyebrow="OUR LITTLE COLLECTION"
           title="Dreams We Could Finally Photograph."
           subtitle="Ultrasounds, tiny clothes, preparations and the moments we spent imagining you."
