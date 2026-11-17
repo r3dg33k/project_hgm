@@ -13,11 +13,12 @@ import Chapter04 from "../chapters/Chapter04";
 import Chapter05 from "../chapters/Chapter05";
 
 import { siteConfig } from "../../data/site.config";
+import { story } from "../../data/story";
 
 export default function StoryLayout() {
 
   useEffect(() => {
-    document.title = siteConfig.siteTitle;
+    document.title = siteConfig.name;
 
     const description = document.querySelector(
       'meta[name="description"]'
@@ -26,7 +27,7 @@ export default function StoryLayout() {
     if (description) {
       description.setAttribute(
         "content",
-        siteConfig.siteDescription
+        story.hero.subtitle
       );
     }
 
@@ -35,15 +36,12 @@ export default function StoryLayout() {
   return (
     <div className="story-app">
 
-      {/* Navigation */}
       <Navigation />
 
-      {/* Reading progress */}
       <StoryProgress />
 
       <main id="main-content">
 
-        {/* Opening chapters */}
         <Chapter01 />
 
         <div className="chapter-transition" aria-hidden="true">
@@ -68,7 +66,6 @@ export default function StoryLayout() {
           <span>✿</span>
         </div>
 
-        {/* Emotional climax */}
         <Chapter04 />
 
         <div className="chapter-transition" aria-hidden="true">
@@ -77,15 +74,13 @@ export default function StoryLayout() {
           <span>✧</span>
         </div>
 
-        {/* Final chapter */}
         <Chapter05 />
 
       </main>
 
-      {/* Closing page */}
       <Footer
-        wifeName={siteConfig.wifeName}
-        daughterName={siteConfig.daughterName}
+        wifeName={story.family.wifeName}
+        daughterName={story.family.daughterName}
       />
 
     </div>
