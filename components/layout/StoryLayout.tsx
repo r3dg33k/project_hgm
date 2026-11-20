@@ -5,6 +5,14 @@ import Navigation from "./Navigation";
 import Footer from "./Footer";
 
 import StoryProgress from "../ui/StoryProgress";
+import {
+  Hero,
+  ScrubText,
+  ChapterStack,
+  Journey,
+  Marquee,
+  CursorGlow
+} from "../ui/Cinematic";
 
 import Chapter01 from "../chapters/Chapter01";
 import Chapter02 from "../chapters/Chapter02";
@@ -39,8 +47,15 @@ export default function StoryLayout() {
       <Navigation />
 
       <StoryProgress />
+      <CursorGlow />
 
       <main id="main-content">
+
+        <Hero />
+
+        <ScrubText />
+
+        <ChapterStack />
 
         <Chapter01 />
 
@@ -75,6 +90,10 @@ export default function StoryLayout() {
         </div>
 
         <Chapter05 />
+
+        <Journey />
+
+        <Marquee />
 
       </main>
 
