@@ -1,4 +1,9 @@
-import { useEffect, useRef, type CSSProperties, type PointerEvent } from "react";
+import {
+  useEffect,
+  useRef,
+  type CSSProperties,
+  type PointerEvent as ReactPointerEvent
+} from "react";
 
 import { story } from "../../data/story";
 import { siteConfig } from "../../data/site.config";
@@ -35,7 +40,7 @@ export function Hero() {
   const ref = useScrollVar<HTMLElement>();
   const h = story.hero;
 
-  const onMove = (e: PointerEvent<HTMLElement>) => {
+  const onMove = (e: ReactPointerEvent<HTMLElement>) => {
     const r = e.currentTarget.getBoundingClientRect();
     e.currentTarget.style.setProperty(
       "--mx",
