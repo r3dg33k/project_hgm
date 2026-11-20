@@ -14,8 +14,40 @@ const IMG = "/images/";
 
 // Images with no real file and no good stand-in: we paint one.
 const generated: Record<string, Scene> = {
+  // Chapter 1
+  [`${IMG}illustrations/chapter-01-pregnancy.webp`]: "pregnant",
+  [`${IMG}illustrations/couple-first-dreams.webp`]: "couple",
+
+  // Chapter 2
+  [`${IMG}illustrations/chapter-02-strength.webp`]: "strength",
+  [`${IMG}illustrations/india-journey.webp`]: "journey",
+  [`${IMG}illustrations/pregnant-taraweeh.webp`]: "taraweeh",
+  [`${IMG}illustrations/ramadan-mosque.webp`]: "mosque",
+
+  // Chapter 3
+  [`${IMG}illustrations/chapter-03-dreams.webp`]: "window",
+  [`${IMG}illustrations/family-waiting.webp`]: "family",
   [`${IMG}illustrations/baby-nursery.webp`]: "nursery",
   [`${IMG}illustrations/tiny-baby-clothes.webp`]: "clothes",
+
+  // Chapter 4
+  [`${IMG}illustrations/chapter-04-hospital.webp`]: "hospital",
+  [`${IMG}illustrations/final-pregnancy-waiting.webp`]: "waiting",
+  [`${IMG}illustrations/labour-strength.webp`]: "labour",
+  [`${IMG}illustrations/operating-room-waiting.webp`]: "operating",
+  [`${IMG}illustrations/mother-newborn.webp`]: "motherBaby",
+  [`${IMG}illustrations/newborn-first-glimpse.webp`]: "newborn",
+
+  // Chapter 5
+  [`${IMG}illustrations/chapter-05-motherhood.webp`]: "motherBaby",
+  [`${IMG}illustrations/first-feeding.webp`]: "feeding",
+  [`${IMG}illustrations/first-parenting.webp`]: "father",
+  [`${IMG}illustrations/mother-recovery.webp`]: "recovery",
+  [`${IMG}illustrations/family-hospital.webp`]: "hospitalFamily",
+  [`${IMG}illustrations/father-newborn.webp`]: "father",
+  [`${IMG}illustrations/family-of-three.webp`]: "three",
+
+  // Photo placeholders (real ultrasound/family photos still use your files)
   [`${IMG}memories/tiny-clothes.webp`]: "clothes",
   [`${IMG}memories/hajj.webp`]: "hajj",
   [`${IMG}memories/discovery.webp`]: "discovery",
