@@ -5,6 +5,7 @@ import "./lib/imageFallback";
 import "./styles/chapters.css";
 import "./styles/animations.css";
 import App from "./App";
+import "./styles/layout-fix.css";
 
 const rootElement = document.getElementById("root");
 

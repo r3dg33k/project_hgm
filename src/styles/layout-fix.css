@@ -1,0 +1,235 @@
+/* =========================================================
+   LAYOUT FIX — styles for every class the components use
+   that the older stylesheets never defined.
+   Loaded last (see main.tsx) so it fills the gaps.
+========================================================= */
+
+/* ---------- Reveal directions (component uses .reveal-up etc.) ---------- */
+
+.reveal-up    { transform: translateY(35px); }
+.reveal-down  { transform: translateY(-35px); }
+.reveal-left  { transform: translateX(-35px); }
+.reveal-right { transform: translateX(35px); }
+.reveal-fade  { transform: none; }
+.reveal.visible { opacity: 1; transform: none; }
+
+/* ---------- Navigation ---------- */
+
+.navigation-inner { display: flex; align-items: center; justify-content: space-between; width: 100%; gap: 20px; }
+
+.navigation-brand {
+  flex-direction: row; align-items: center; gap: 10px; border: 0; background: none;
+  font-family: var(--font-heading); font-size: 1.25rem; font-weight: 600; color: var(--text-primary);
+}
+.navigation-brand span { font-size: inherit; letter-spacing: 0.02em; text-transform: none; color: inherit; }
+.navigation-brand .navigation-brand-icon { color: var(--rich-pink); font-size: 1.5rem; }
+
+.navigation-link {
+  position: relative; border: 0; background: none; padding: 8px 2px;
+  font-size: 0.78rem; letter-spacing: 0.04em; color: var(--text-secondary); transition: color 0.2s;
+}
+.navigation-link::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 2px; height: 2px; border-radius: 2px;
+  background: var(--deep-coral); transform: scaleX(0); transition: transform 0.3s;
+}
+.navigation-link:hover, .navigation-link.active { color: var(--deep-coral); }
+.navigation-link.active::after, .navigation-link:hover::after { transform: scaleX(1); }
+
+.navigation-menu-toggle { display: none; border: 0; background: none; padding: 8px; }
+.navigation-menu-toggle span { display: block; width: 22px; height: 2px; margin: 5px 0; border-radius: 2px; background: var(--text-primary); }
+
+.mobile-navigation {
+  position: absolute; top: 100%; left: 0; right: 0; padding: 10px 22px 22px;
+  display: flex; flex-direction: column; background: var(--warm-white); box-shadow: var(--shadow-soft);
+}
+.mobile-navigation-link {
+  display: flex; justify-content: space-between; align-items: center; border: 0; background: none;
+  padding: 14px 0; border-bottom: 1px solid rgba(214, 183, 121, 0.2); font-size: 1rem; color: var(--text-primary);
+}
+.mobile-navigation-link.active { color: var(--deep-coral); }
+.mobile-navigation-link span { color: var(--rich-pink); }
+
+@media (max-width: 768px) { .navigation-menu-toggle { display: block; } }
+
+/* ---------- Reading progress ---------- */
+
+.story-progress-track { position: fixed; z-index: 1100; top: 0; left: 0; width: 100%; height: 4px; background: rgba(214, 183, 121, 0.18); }
+.story-progress-fill { height: 100%; background: linear-gradient(90deg, var(--rich-pink), var(--deep-coral), var(--champagne)); }
+.story-progress-star { position: absolute; top: 50%; transform: translate(-50%, -50%); font-size: 0.9rem; color: var(--champagne); text-shadow: 0 0 10px rgba(214, 183, 121, 0.9); }
+
+/* ---------- Footer ---------- */
+
+.story-footer { padding-top: 120px; }
+.footer-decoration, .final-letter-decoration, .birth-reveal-stars, .ramadan-stars { display: flex; justify-content: center; align-items: center; gap: 16px; margin-bottom: 26px; }
+.footer-family { display: flex; justify-content: center; gap: 14px; margin: 10px 0 30px; font-size: 1.6rem; }
+.footer-mother { color: var(--rich-pink); }
+.footer-father { color: var(--baby-blue); }
+.footer-baby { color: var(--butter); font-size: 1.1rem; align-self: flex-end; }
+.footer-eyebrow { margin: 0; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.3em; color: var(--champagne) !important; }
+.footer-title { margin: 16px 0 24px; line-height: 1.1; }
+.footer-title span { font-style: italic; color: var(--butter); }
+.footer-dedication { font-family: var(--font-heading); font-size: 1.35rem; line-height: 1.6; }
+.footer-blessing { display: flex; justify-content: center; align-items: center; gap: 16px; margin: 36px auto; max-width: 640px; }
+.footer-blessing p { margin: 0; }
+.footer-blessing span { color: var(--champagne); font-size: 1.5rem; }
+.footer-bottom { margin-top: 60px; padding-top: 24px; border-top: 1px solid rgba(255, 255, 255, 0.13); }
+.footer-bottom p, .footer-bottom span { font-size: 0.78rem; color: rgba(255, 255, 255, 0.55); }
+
+/* ---------- Section headings ---------- */
+
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.section-eyebrow { display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase; color: var(--deep-coral); }
+.heading-decoration { display: flex; justify-content: center; align-items: center; gap: 14px; margin: 16px 0 6px; }
+.heading-decoration span:first-child, .heading-decoration span:last-child { width: 70px; height: 1px; background: linear-gradient(90deg, transparent, var(--champagne)); }
+.heading-decoration span:last-child { transform: scaleX(-1); }
+.decoration-flower { color: var(--rich-pink); }
+.section-title { margin: 8px 0 14px; font-size: clamp(2rem, 4.6vw, 3.6rem); color: var(--text-primary); }
+.section-subtitle { max-width: 640px; margin: 0 auto; font-size: 1.05rem; }
+
+/* ---------- Handwritten notes ---------- */
+
+.handwritten-note-peach { background: #FFF1E9; }
+.handwritten-note-lavender { background: var(--soft-lavender); }
+.handwritten-note-pink { background: var(--soft-pink); }
+.handwritten-note-gold { background: #F8F0DE; }
+.handwritten-note-decoration { margin-bottom: 8px; font-size: 1.6rem; color: var(--champagne); }
+.handwritten-note-bottom { display: flex; justify-content: center; align-items: center; gap: 12px; margin-top: 24px; }
+.handwritten-note-bottom .handwritten-note-signature { margin-top: 0; }
+.handwritten-note-heart { color: var(--rich-pink); font-size: 1.4rem; }
+
+/* ---------- Memory gallery & lightbox ---------- */
+
+.memory-card-reveal { min-width: 0; }
+.memory-card { display: block; width: 100%; text-align: left; }
+.memory-card-image-wrap { position: absolute; inset: 0; }
+.memory-card-overlay { position: absolute; inset: 0; display: grid; place-items: center; background: rgba(37, 44, 75, 0.28); opacity: 0; transition: opacity 0.35s; }
+.memory-card:hover .memory-card-overlay { opacity: 1; }
+.memory-card-zoom { display: grid; place-items: center; width: 46px; height: 46px; border-radius: 50%; background: #fff; color: var(--deep-coral); font-size: 1.2rem; }
+.memory-card-caption { display: flex; align-items: flex-end; gap: 8px; }
+.memory-card-caption-mark { color: var(--butter); }
+
+.lightbox-overlay { position: fixed; z-index: 3000; inset: 0; display: grid; place-items: center; padding: 30px; background: rgba(27, 30, 49, 0.94); backdrop-filter: blur(12px); }
+.lightbox-overlay > .lightbox-close { top: 20px; right: 20px; }
+.lightbox-image { max-width: 100%; max-height: 78vh; object-fit: contain; border-radius: 12px; }
+
+/* ---------- Floating decorations ---------- */
+
+.floating-decorations { position: absolute; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; }
+.decoration-position { position: absolute; display: block; }
+.floating-decoration { opacity: 0.55; animation: float-flower 7s ease-in-out infinite; }
+.chapter > div { position: relative; z-index: 1; }
+.chapter > .floating-decorations { position: absolute; z-index: 0; }
+
+/* ---------- Images inside chapters (low specificity so specifics still win) ---------- */
+
+:where(.chapter) img:where(:not(.memory-card-image):not(.lightbox-image)) {
+  display: block; width: min(780px, 100%); height: auto; margin: 40px auto;
+  border-radius: var(--radius-large); box-shadow: var(--shadow-soft);
+}
+
+.chapter .reveal > svg { display: block; margin: 0 auto 16px; }
+
+/* ---------- Heroes ---------- */
+
+.chapter-one-title, .chapter-two-title { max-width: 950px; margin: 20px auto; font-size: clamp(2.8rem, 7vw, 5.6rem); line-height: 1.1; }
+.chapter-one-title { color: #77555d; }
+.chapter-two-title { color: #5e4a72; }
+.chapter-one-title span, .chapter-two-title span { display: block; font-style: italic; color: var(--deep-coral); }
+.chapter-two-title span { color: var(--deep-lavender); }
+
+:is(.chapter-one-hero, .chapter-two-hero, .chapter-three-hero, .chapter-four-hero, .chapter-five-hero) p { max-width: 620px; margin: 0 auto 14px; font-size: 1.1rem; }
+.chapter-two-hero { display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.chapter-one-subtitle { font-family: var(--font-heading); font-style: italic; font-size: 1.4rem !important; }
+.chapter-one-illustration { position: relative; width: min(780px, 100%); margin: 40px auto; }
+.chapter-one-illustration img { margin: 0 auto; }
+.chapter-one-flower { position: absolute; top: -14px; right: 18px; }
+.chapter-one-star { position: absolute; bottom: 26px; left: 12px; }
+
+/* ---------- Section padding ---------- */
+
+:is(.chapter-content, .chapter-early-pregnancy, .chapter-sacrifice, .chapter-ramadan-letter, .chapter-csection) { padding: 90px 24px; }
+.chapter-memory-section { padding: 30px 0 60px; }
+.chapter-csection { text-align: center; }
+.csection-decoration { margin-bottom: 14px; }
+
+:is(.chapter-one-closing, .chapter-two-closing, .chapter-three-closing, .chapter-four-closing) { padding: 90px 24px; text-align: center; }
+:is(.chapter-one-closing, .chapter-two-closing, .chapter-three-closing, .chapter-four-closing) h3 { max-width: 760px; margin: 24px auto; font-size: clamp(2rem, 4vw, 3rem); }
+:is(.chapter-one-closing, .chapter-two-closing, .chapter-three-closing, .chapter-four-closing) p { max-width: 640px; margin: 0 auto 16px; }
+.chapter-closing-symbol { display: flex; justify-content: center; align-items: center; gap: 12px; }
+.chapter-closing-final { font-family: var(--font-heading); font-style: italic; font-size: 1.35rem; color: var(--deep-coral) !important; }
+:is(.chapter-closing-heart, .family-final-heart) { display: block; margin-top: 20px; font-size: 2.5rem; color: var(--rich-pink); }
+
+/* ---------- Text blocks ---------- */
+
+:is(.ultrasound-story, .family-excitement-text, .ramadan-story, .announcement-text) { width: min(calc(100% - 48px), 760px); margin: 0 auto; }
+:is(.ultrasound-story, .family-excitement-text, .ramadan-story) p { font-size: clamp(0.98rem, 1.5vw, 1.1rem); line-height: 2.1; margin-bottom: 1.5rem; }
+
+.chapter p:is(.labour-emphasis, .golden-emphasis, .first-glimpse-emphasis, .motherhood-emphasis, .recovery-emphasis, .fatherhood-emphasis, .final-letter-emphasis) {
+  font-family: var(--font-heading); font-style: italic; font-size: clamp(1.4rem, 2.6vw, 1.95rem); line-height: 1.5; color: var(--deep-coral);
+}
+.chapter p.golden-emphasis { color: var(--gold); }
+
+/* ---------- Card grids (cards sit inside .reveal wrappers) ---------- */
+
+.sacrifice-grid { width: min(950px, 100%); margin: 45px auto; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+:is(.sacrifice-grid, .pregnancy-moments-grid, .preparation-grid, .parenting-lessons-grid) > .reveal > article { height: 100%; }
+.sacrifice-card { padding: 34px; border-radius: var(--radius-medium); background: rgba(255, 255, 255, 0.82); box-shadow: var(--shadow-soft); }
+.sacrifice-card > span { display: block; margin-bottom: 12px; font-size: 1.8rem; color: var(--rich-pink); }
+.sacrifice-card h3 { font-size: 1.6rem; }
+.sacrifice-card p { margin: 0; }
+.sacrifice-grid > :nth-child(2) .sacrifice-card { background: var(--soft-lavender); }
+.sacrifice-grid > :nth-child(3) .sacrifice-card { background: var(--soft-blue); }
+.sacrifice-grid > :nth-child(4) .sacrifice-card { background: var(--soft-pink); }
+
+.pregnancy-moments-grid > :nth-child(2) .pregnancy-moment-card { background: var(--soft-blue); }
+.pregnancy-moments-grid > :nth-child(3) .pregnancy-moment-card { background: var(--soft-lavender); }
+.pregnancy-moments-grid > :nth-child(4) .pregnancy-moment-card { background: var(--soft-mint); }
+.preparation-grid > :nth-child(2) .preparation-card { background: var(--soft-pink); }
+.preparation-grid > :nth-child(3) .preparation-card { background: var(--soft-blue); }
+.preparation-grid > :nth-child(4) .preparation-card { background: var(--soft-yellow); }
+.parenting-lessons-grid > :nth-child(2) .parenting-lesson-card { background: var(--soft-blue); }
+.parenting-lessons-grid > :nth-child(3) .parenting-lesson-card { background: var(--soft-lavender); }
+.parenting-lessons-grid > :nth-child(4) .parenting-lesson-card { background: var(--soft-yellow); }
+
+.moment-decoration { position: absolute; right: 18px; bottom: 14px; color: var(--champagne); }
+.lesson-icon { display: block; margin-bottom: 14px; font-size: 2rem; color: var(--rich-pink); }
+.recovery-heart { color: var(--rich-pink); }
+
+/* ---------- Ramadan ---------- */
+
+.ramadan-title { max-width: 850px; margin: 24px auto; font-size: clamp(2.6rem, 6vw, 4.6rem); text-align: center; }
+.ramadan-title span { display: block; font-style: italic; color: #ebd39a; }
+.chapter-ramadan { text-align: center; }
+.ramadan-intro { max-width: 560px; margin: 0 auto; font-size: 1.15rem; }
+.ramadan-main-illustration, .ramadan-mosque { width: min(760px, 100%); margin: 40px auto; }
+.ramadan-highlight { font-family: var(--font-heading); font-size: clamp(1.6rem, 3.5vw, 2.4rem) !important; color: #f8e6b9 !important; line-height: 1.5; }
+.ramadan-quote { width: min(780px, 100%); margin: 70px auto 10px; padding: 45px 30px; border: 1px solid rgba(214, 183, 121, 0.45); border-radius: var(--radius-large); background: rgba(255, 255, 255, 0.055); }
+.ramadan-quote blockquote { margin: 0; color: #f8e6b9; font-family: var(--font-heading); font-size: clamp(1.5rem, 3.6vw, 2.4rem); line-height: 1.5; }
+.quote-decoration { display: block; margin: 12px 0; font-size: 1.6rem; color: var(--champagne); }
+
+/* ---------- Chapter 4 ---------- */
+
+.clock-decoration { color: var(--champagne); font-size: 1rem; }
+.labour-clock-face span { font-size: 0.7rem; letter-spacing: 0.3em; color: var(--text-secondary); }
+.chapter-birth-reveal p { color: rgba(255, 255, 255, 0.85); }
+.birth-small-heading { margin-top: 10px; font-size: 0.8rem !important; letter-spacing: 0.34em; color: #f0d8a1 !important; }
+.birth-details { max-width: 560px; margin: 10px auto 0; }
+.announcement-reveal-button span:first-child, .announcement-heart { display: block; font-size: 3.4rem; color: var(--rich-pink); }
+.announcement-hint { font-family: var(--font-body); font-size: 0.78rem; letter-spacing: 0.16em; color: var(--text-secondary); }
+.announcement-caption { font-size: 0.7rem; letter-spacing: 0.22em; color: var(--gold); }
+.announcement-followup { margin-top: 30px; font-size: 1.1rem; }
+.announcement-family-question { font-family: var(--font-heading); font-style: italic; font-size: clamp(1.8rem, 4vw, 2.7rem); color: var(--deep-coral) !important; }
+.announcement-closing { max-width: 600px; margin: 0 auto; }
+
+/* ---------- Chapter 5 ---------- */
+
+.final-letter-decoration { margin-bottom: 20px; }
+.chapter-family-of-three img { margin-bottom: 40px; }
+.chapter-tiny-clothes img { width: 100%; margin: 0; }
+
+@media (max-width: 650px) {
+  .sacrifice-grid { grid-template-columns: 1fr; }
+  :is(.chapter-content, .chapter-early-pregnancy, .chapter-sacrifice, .chapter-ramadan-letter, .chapter-csection) { padding: 65px 18px; }
+  .footer-blessing { flex-direction: column; text-align: center; }
+}

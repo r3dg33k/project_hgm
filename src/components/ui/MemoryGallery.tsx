@@ -25,6 +25,9 @@ export default function MemoryGallery({
     closeLightbox
   } = useLightbox();
 
+  // Nothing to show yet (e.g. Chapter 2 has no photos): skip the empty heading.
+  if (images.length === 0) return null;
+
   return (
     <section className="memory-gallery-section">
       <div className="memory-gallery-container">
