@@ -1,6 +1,7 @@
 
 import React from "react";
 import ReactDOM from "react-dom/client";
+import "./lib/imageFallback";
 import "./styles/chapters.css";
 import "./styles/animations.css";
 import App from "./App";

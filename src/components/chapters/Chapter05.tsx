@@ -339,8 +339,8 @@ export default function Chapter05() {
         <div className="chapter-story-text">
           <Reveal direction="up">
             <p>
-              Your mother was there.
-              Your sister was there.
+              My mother was there.
+              My sisters were there.
               And I was standing beside you.
             </p>
 
