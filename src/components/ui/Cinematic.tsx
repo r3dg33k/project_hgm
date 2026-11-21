@@ -114,9 +114,9 @@ export function ScrubText() {
         <h2>{title}</h2>
         <p className="cx-scrub-text" style={v({ "--n": words.length })}>
           {words.map((w, i) => (
-            <span key={i} style={v({ "--i": i })}>
-              {w}{" "}
-            </span>
+            <Fragment key={i}>
+              <span style={v({ "--i": i })}>{w}</span>{" "}
+            </Fragment>
           ))}
         </p>
       </div>
