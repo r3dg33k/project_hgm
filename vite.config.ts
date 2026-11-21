@@ -25,7 +25,6 @@ export default defineConfig({
     assetsDir: "assets",
     emptyOutDir: true,
     sourcemap: false,
-    minify: "esbuild",
     cssMinify: true
   }
 });

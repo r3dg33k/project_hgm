@@ -70,7 +70,7 @@
   line-height: 0.98; letter-spacing: -0.035em; color: #fff8f0;
 }
 
-.cx-line { display: block; padding: 0.06em 0 0.14em; overflow: hidden; }
+.cx-line { display: block; padding: 0.06em 0.14em 0.14em; overflow: hidden; }
 .cx-accent { font-style: italic; color: #f8e4a6; }
 .cx-word { display: inline-block; white-space: nowrap; }
 

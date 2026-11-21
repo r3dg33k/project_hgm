@@ -1,4 +1,5 @@
 import {
+  Fragment,
   useEffect,
   useRef,
   type CSSProperties,
@@ -22,13 +23,15 @@ function Chars({ text, start = 0 }: { text: string; start?: number }) {
   return (
     <>
       {text.split(" ").map((word, w) => (
-        <span className="cx-word" key={w} aria-hidden="true">
-          {word.split("").map((c) => (
-            <span className="cx-ch" key={n} style={v({ "--i": n++ })}>
-              {c}
-            </span>
-          ))}{" "}
-        </span>
+        <Fragment key={w}>
+          <span className="cx-word" aria-hidden="true">
+            {word.split("").map((c) => (
+              <span className="cx-ch" key={n} style={v({ "--i": n++ })}>
+                {c}
+              </span>
+            ))}
+          </span>{" "}
+        </Fragment>
       ))}
     </>
   );
